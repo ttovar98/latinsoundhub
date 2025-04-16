@@ -1,0 +1,374 @@
+html, body,
+header, nav, main, section, footer,
+h1, h2, h3, p,
+ul, li, a,
+figure, figcaption, img,
+form, label, input, textarea, button {
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  background-image: url('background.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed; 
+  color: #1a1a1a;
+  padding: 20px;
+}
+
+img {
+	display: block;
+  margin: 0 auto;
+  max-width: 100%;
+  height: auto;
+  border-radius: 12px;
+  object-fit: cover;
+}
+
+
+/* Header and Navigation */
+
+header, footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+header {
+  background-color: #3DB2FF;
+  color: #fff;
+  padding: 20px 0;
+  text-align: center;
+  margin-bottom: 20px;
+  align-content: center;
+}
+
+header h1 {
+  font-size: 2em;
+  margin-bottom: 10px;
+  text-shadow: 1px 1px #00000044;
+}
+
+nav ul {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  list-style: none;
+  gap: 15px;
+}
+
+nav a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+  padding: 10px 16px;
+  border-radius: 8px;
+  background-color: #FF8A3D;
+  transition: background-color 0.3s;
+}
+
+nav a:hover {
+  background-color: #FF3DB2;
+}
+
+/* Main Content */
+main {
+  margin-bottom: 40px;
+    display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+h2 {
+  font-size: 1.8em;
+  margin-bottom: 10px;
+  color: #8A3DFF;
+}
+
+h3 {
+  font-size: 1.4em;
+  margin-top: 20px;
+  color: #3DFF8A;
+}
+
+p, ul {
+  margin-bottom: 15px;
+  max-width: 800px;
+}
+
+/* Figures */
+.cover {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 15px;
+  text-align: center;
+  margin: 20px 0;
+}
+
+figure {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+  text-align: center;
+  margin: 20px 0;
+}
+
+figure img {
+  width: 45%;
+  max-width: 400px;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
+}
+
+
+figcaption {
+  font-size: 0.9em;
+  color: #555;
+}
+
+/* Form */
+form {
+  max-width: 600px;
+  margin-top: 20px;
+}
+
+label {
+  display: block;
+  margin-top: 10px;
+  font-weight: bold;
+}
+
+input, textarea, button {
+  width: 100%;
+  padding: 10px;
+  margin-top: 5px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+textarea {
+  resize: vertical;
+}
+
+button {
+  display: inline-block;
+  width: auto; 
+  padding: 10px 16px; 
+  background-color: #B2FF3D;
+  color: #000;
+  font-size: 1em;
+  font-weight: bold;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+button:hover {
+  background-color: #3DFF8A;
+  color: #000;
+}
+
+/* Footer */
+footer {
+  background-color: #3DB2FF;
+  color: #fff;
+  text-align: center;
+  padding: 10px;
+  font-size: 0.9em;
+  border-radius: 10px;
+  margin-top: 40px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  nav ul {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  input, textarea, button {
+    font-size: 1em;
+  }
+}
+
+.layout {
+	display: flex;
+	gap: 20px;
+	align-items: flex-start;
+}
+
+.feature {
+	flex: 3;
+}
+
+.news {
+	flex: 1;
+	background-color: #f2f2f2;
+	padding: 20px;
+	border-radius: 10px;
+}
+
+.wrapper {
+  max-width: 900px;
+  margin: 40px auto;
+  padding: 30px;
+  background: linear-gradient(135deg, #e8f4ff, #f9f9f9);
+  background-color: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  border: 1px solid #ddd;
+}
+
+.new-artists {
+  background-color: #f8f8f8;
+  padding: 40px 20px;
+  border-radius: 12px;
+  max-width: 800px;
+  margin: auto;
+  font-family: 'Arial', sans-serif;
+}
+
+.new-artists h2 {
+  font-size: 2rem;
+  color: #3DB2FF;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.artist {
+  margin-bottom: 30px;
+  padding: 20px;
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+.artist h3 {
+  margin: 0 0 10px;
+  color: #FF3DB2;
+}
+
+.artist span {
+  font-size: 0.9rem;
+  color: #666;
+}
+
+.artist em {
+  color: #FF8A3D;
+}
+
+.media-page {
+  padding: 2rem;
+  background-color: #fffdfb;
+  color: #222;
+}
+
+.media-page h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: #FF3DB2; 
+  text-align: center;
+}
+
+.media-section {
+  margin-bottom: 3rem;
+}
+
+.photo-gallery {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: center;
+}
+
+.photo-gallery img {
+  width: 300px;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.video-gallery {
+  display: flex;
+  gap: 1.5rem;
+  justify-content: center;
+  flex-wrap: wrap;
+  padding: 1rem;
+}
+
+video {
+  width: auto;
+  max-width: 100%;
+  height: auto;
+  max-height: 400px;
+  border-radius: 12px;
+  border: none;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.15);
+}
+.top-songs-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 2rem;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 0 12px rgba(0, 0, 0, 0.1);
+}
+
+.top-songs-table th,
+.top-songs-table td {
+  padding: 1rem;
+  text-align: center;
+  border-bottom: 1px solid #eee;
+}
+
+.top-songs-table th {
+  background-color: #3DB2FF;
+  color: #fff;
+  font-size: 1.2rem;
+}
+
+.top-songs-table td {
+  font-size: 1rem;
+  color: #333;
+}
+
+.top-songs-table tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+.top-songs-table tr:hover {
+  background-color: #f1f1f1;
+}
+
+.top-songs-table td:nth-child(1) {
+  color: #FF3DB2; /* Highlight rank with your accent color */
+}
+
+.top-songs-table td:nth-child(2) {
+  font-weight: bold;
+}
+
+.top-songs-table td:nth-child(3) {
+  color: #8A3DFF; /* Artist name */
+}
+
+.top-songs-table td:nth-child(4) {
+  color: #FF8A3D; /* Debut Date */
+}
+
+.top-songs-table td:nth-child(5) {
+  color: #3DFF8A; /* Label */
+}
