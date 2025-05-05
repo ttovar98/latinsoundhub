@@ -153,7 +153,7 @@ input, textarea, button {
   padding: 10px;
   margin-top: 5px;
   margin-bottom: 15px;
-  border: 1px solid #ccc;
+  border: 0.5px solid #ccc;
   border-radius: 5px;
 }
 
@@ -228,7 +228,7 @@ footer {
   background-color: #fff;
   border-radius: 12px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-  border: 1px solid #ddd;
+  border: none;
 }
 
 .new-artists {
@@ -331,7 +331,7 @@ video {
 .top-songs-table td {
   padding: 1rem;
   text-align: center;
-  border-bottom: 1px solid #eee;
+  border-bottom: 0.5px solid #eee;
 }
 
 .top-songs-table th {
@@ -371,4 +371,27 @@ video {
 
 .top-songs-table td:nth-child(5) {
   color: #3DFF8A; /* Label */
+}
+
+.skip-link {
+  position: absolute;
+  left: -999px;
+  top: auto;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  z-index: 100;
+}
+
+.skip-link:focus {
+  left: 10px;
+  top: 10px;
+  width: auto;
+  height: auto;
+  background: #FF3DB2;
+  color: white;
+  padding: 10px 15px;
+  font-weight: bold;
+  border-radius: 6px;
+  box-shadow: 0 0 4px rgba(0,0,0,0.2);
 }
