@@ -3,8 +3,9 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Reach out to Latin Sound Hub for questions, collaborations, or feedback. We'd love to hear from you!" />
+  <meta name="description" content="Reach out to Latin Sound Hub for questions, collaborations, or feedback. We'd love to hear from you!">
   <title>Contact Us - Latin Sound Hub</title>
+  <link rel="icon" type="image/lsh-icon" href="media/favicon.ico">
   <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
@@ -13,32 +14,37 @@
 <div class="wrapper">
 
   <header>
-    <img src="media/LSH.png" alt="Latin Sound Hub Logo">
-    <nav>
-      <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="about.html">About Us</a></li>
-        <li><a href="new.html">New Stuff</a></li>
-        <li><a href="near.html">Near You</a></li>
-        <li><a href="gossip.html">Gossip</a></li>
-        <li><a href="artsy.html">Artsy</a></li>
-        <li><a href="contact.html">Contact Us</a></li>
-      </ul>
-    </nav>
-  </header>
+  <img src="media/LSH.png" alt="Latin Sound Hub">
+
+  <button class="nav-toggle" aria-label="Toggle navigation">
+    ☰
+  </button>
+
+  <nav class="nav-menu">
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About Us</a></li>
+      <li><a href="new.html">The New</a></li>
+      <li><a href="near.html">Near You</a></li>
+      <li><a href="gossip.html">Gossip</a></li>
+      <li><a href="artsy.html">Artsy</a></li>
+      <li><a href="contact.html">Contact Us</a></li>
+    </ul>
+  </nav>
+</header>
   <main>
     <h2>Contact Us</h2>
     <p>We want to hear from you! Drop us a message, artist suggestions, or site feedback.</p>
 
     <form action="#" method="post">
       <label for="name">Name:</label>
-      <input type="text" id="name" name="name" required />
+      <input type="text" id="name" name="name" required>
 
       <label for="email">Email:</label>
-      <input type="email" id="email" name="email" required />
+      <input type="email" id="email" name="email" required>
 
       <label for="artist">Favorite Artist:</label>
-      <input type="text" id="artist" name="artist" />
+      <input type="text" id="artist" name="artist">
 
       <label for="message">Message:</label>
       <textarea id="message" name="message" rows="5" required></textarea>
@@ -52,5 +58,6 @@
     <p>&copy; 2025 Latin Sound Hub. All rights reserved. The images used on this site are not owned by Latin Sound Hub. <br> Last updated: May 2025</p>
   </footer>
   </div>
+  <script src="script.js"></script>
 </body>
 </html>
