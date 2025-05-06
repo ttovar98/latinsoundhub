@@ -19,6 +19,7 @@ body {
   background-attachment: fixed; 
   color: #1a1a1a;
   padding: 20px;
+  overflow-x: hidden;
 }
 
 img {
@@ -30,8 +31,6 @@ img {
   object-fit: cover;
 }
 
-
-/* Header and Navigation */
 
 header, footer {
   display: flex;
@@ -102,6 +101,7 @@ p, ul {
   margin-bottom: 15px;
   max-width: 800px;
 }
+
 
 /* Figures */
 .cover {
@@ -191,17 +191,6 @@ footer {
   margin-top: 40px;
 }
 
-/* Responsive Design */
-@media (max-width: 768px) {
-  nav ul {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  input, textarea, button {
-    font-size: 1em;
-  }
-}
 
 .layout {
 	display: flex;
@@ -221,14 +210,12 @@ footer {
 }
 
 .wrapper {
-  max-width: 900px;
-  margin: 40px auto;
-  padding: 30px;
+  max-width: 100%;
+  margin: 10px auto;
+  padding: 20px;
   background: linear-gradient(135deg, #e8f4ff, #f9f9f9);
-  background-color: #fff;
   border-radius: 12px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-  border: none;
 }
 
 .new-artists {
@@ -292,7 +279,7 @@ footer {
   gap: 1rem;
   justify-content: center;
 }
-
+	
 .photo-gallery img {
   width: 300px;
   height: 200px;
@@ -354,7 +341,7 @@ video {
 }
 
 .top-songs-table td:nth-child(1) {
-  color: #FF3DB2; /* Highlight rank with your accent color */
+  color: #FF3DB2; 
 }
 
 .top-songs-table td:nth-child(2) {
@@ -362,15 +349,15 @@ video {
 }
 
 .top-songs-table td:nth-child(3) {
-  color: #8A3DFF; /* Artist name */
+  color: #8A3DFF;
 }
 
 .top-songs-table td:nth-child(4) {
-  color: #FF8A3D; /* Debut Date */
+  color: #FF8A3D; 
 }
 
 .top-songs-table td:nth-child(5) {
-  color: #3DFF8A; /* Label */
+  color: #3DFF8A; 
 }
 
 .skip-link {
@@ -394,4 +381,113 @@ video {
   font-weight: bold;
   border-radius: 6px;
   box-shadow: 0 0 4px rgba(0,0,0,0.2);
+}
+
+@media (max-width: 600px) {
+  .wrapper {
+    margin: 5px;
+    padding: 10px;
+  }
+}
+
+.nav-toggle {
+  display: none;
+  font-size: 2rem;
+  background: none;
+  border: none;
+  color: #fff;
+  margin: 10px;
+  cursor: pointer;
+}
+
+
+@media (max-width: 768px) {
+	
+  input, textarea, button {
+    font-size: 1em;
+  }
+  
+  .nav-toggle {
+    display: block;
+  }
+
+  .nav-menu {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    background-color: #3DB2FF;
+    text-align: center;
+  }
+
+  .nav-menu.open {
+    display: flex;
+  }
+
+  nav ul {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .layout {
+    flex-direction: column;
+    gap: 30px;
+	align-items: center !important;
+  }
+
+  .feature, .news {
+    width: 100%;
+	max-width: 600px;
+    padding: 20px;
+	text-align: center;
+  }
+
+  .news {
+    background-color: #fff;
+    box-shadow: 0 0 8px rgba(0,0,0,0.05);
+    border-radius: 10px;
+  }
+
+  .feature figure img {
+    width: 100%;
+  }
+
+ .top-songs-table {
+    border: 0;
+	width: 100%;
+	padding: 0 1rem;
+	box-sizing: border-box;
+  }
+  
+  .top-songs-table table {
+  width: 100%;
+  margin: 0 auto;
+}
+
+  .top-songs-table thead {
+    display: none;
+  }
+
+	.top-songs-table, 
+  .top-songs-table tbody, 
+  .top-songs-table tr, 
+  .top-songs-table td {
+    display: block;
+  }
+
+  .top-songs-table td {
+    text-align: right;
+    position: relative;
+	padding-left: 50%;
+  }
+
+  .top-songs-table td::before {
+    content: attr(data-label);
+    position: absolute;
+    left: 1rem;
+	width: 45%;
+	white-space: nowrap;
+    font-weight: bold;
+    text-align: left;
+	color: #555;
+  }
 }
